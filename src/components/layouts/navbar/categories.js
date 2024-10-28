@@ -1,5 +1,5 @@
 export const categories = [
-  { title: "LANZAMIENTOS", path: "/category/lazamientos" },
-  { title: "PRODUCTOS", path: "/category/Productos" },
-  { title: "CONTACTO", path: "/category/Contacto" },
+  { title: "LANZAMIENTOS", path: "/" },
+  { title: "PRODUCTOS", path: "/category/productos" },
+  { title: "NOSOTROS", path: "/category/nosotros" },
 ];

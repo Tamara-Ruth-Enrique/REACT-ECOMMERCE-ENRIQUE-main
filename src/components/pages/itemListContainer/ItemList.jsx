@@ -1,4 +1,5 @@
 import ProductCard from "../../common/productCard/ProductCard";
+import PropTypes from "prop-types";
 
 const ItemList = ({ items }) => {
   console.log(items);
@@ -19,6 +20,10 @@ const ItemList = ({ items }) => {
       })}
     </div>
   );
+};
+
+ItemList.propTypes = {
+  items: PropTypes.array.isRequired,
 };
 
 export default ItemList;

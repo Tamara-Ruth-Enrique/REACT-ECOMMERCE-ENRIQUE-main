@@ -3,6 +3,8 @@ import CartWidget from "../../common/cartWidget/CartWidget";
 import "./navbar.css";
 import { categories } from "../../../components/layouts/navbar/categories";
 import logo from "../../../assets/images/logo.jpg";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(true);
   const tooggleMode = () => {
@@ -11,16 +13,20 @@ const Navbar = () => {
 
   return (
     <div className={"container-nav"}>
-      {/* logo o el nombre de la empresa  */}
-      <img style={{ width: "70px" }} src={logo} />
-      {/* al medio un listado de categorias clickeables */}
+      <Link to="/">
+        <img style={{ width: "70px" }} src={logo} />
+      </Link>
       <ul>
-        {categories.map((category) => (
-          <li key={category.title}>{category.title}</li>
+        {categories.map(({ title, path }) => (
+          <Link key={title} to={path}>
+            {title}
+          </Link>
         ))}
       </ul>
 
-      <CartWidget />
+      <Link to="/carrito">
+        <CartWidget />
+      </Link>
     </div>
   );
 };

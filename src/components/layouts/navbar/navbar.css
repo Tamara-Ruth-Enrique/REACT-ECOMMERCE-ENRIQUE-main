@@ -35,4 +35,10 @@ li {
 a {
   text-decoration: none;
   color: black;
+  font-size: 25px;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
